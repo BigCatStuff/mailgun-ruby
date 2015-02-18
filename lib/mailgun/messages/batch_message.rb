@@ -99,6 +99,9 @@ module Mailgun
       if @message.has_key?("recipient-variables")
         @message["recipient-variables"] = @message["recipient-variables"].first
       end
+      if @message.has_key?("h:Reply-To")
+        @message["h:Reply-To"] = @message["h:Reply-To"].first
+      end
       response = @client.send_message(@domain, @message).to_h!
       message_id = response['id'].gsub(/\>|\</, '')
       @message_ids[message_id] = count_recipients()
