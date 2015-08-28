@@ -22,7 +22,7 @@ module Mailgun
 
     def initialize(api_key,
                    api_host="api.mailgun.net",
-                   api_version="v2",
+                   api_version="v3",
                    ssl=true)
 
       endpoint = endpoint_generator(api_host, api_version, ssl)

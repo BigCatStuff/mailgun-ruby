@@ -12,5 +12,5 @@ require_relative 'unit/connection/test_client'
 APIKEY = ENV['MAILGUN_API_KEY']
 PUB_APIKEY = ENV['MAILGUN_PUBLIC_KEY']
 APIHOST = "api.mailgun.net"
-APIVERSION = "v2"
+APIVERSION = "v3"
 SSL = true
